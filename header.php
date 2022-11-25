@@ -59,11 +59,22 @@
 					<input type="submit" value="">
 				</div>
 				<ul>
-					<li><a href="#"><span class="fb"> </span></a></li>
-					<li><a href="#"><span class="twit"> </span></a></li>
-					<li><a href="#"><span class="pin"> </span></a></li>
+                    <?php if(get_theme_mod('fb_icon')): ?>
+					<li><a href="<?php echo esc_url(get_theme_mod('fb_icon')); ?>"><span class="fb"> </span></a></li>
+                     <?php endif; ?>
+                      
+					 <?php if(get_theme_mod('tw_icon')): ?>
+					<li><a href="<?php echo esc_url(get_theme_mod('tw_icon')); ?>"><span class="twit"> </span></a></li>
+                    <?php endif; ?>  
+
+                    <?php if(get_theme_mod('pin_icon')): ?>
+					<li><a href="<?php echo esc_url(get_theme_mod('pin_icon')); ?>"><span class="pin"> </span></a></li>
+					<?php endif; ?>
+
 					<li><a href="#"><span class="rss"> </span></a></li>
 					<li><a href="#"><span class="drbl"> </span></a></li>
+
+
 				</ul>
 			</div>
 				<div class="clearfix"></div>
@@ -82,9 +93,10 @@
 	<!--banner-starts-->
 	<div class="banner">
 		<div class="container">
-			<div class="banner-top">
-				<div class="banner-text">
-					<h1>Suspendisse potenti</h1>
+			<div class="banner-top" 
+			style="background-image:url(<?php header_image(); ?>);">
+				<div class="banner-text" style="background-color:<?php echo get_theme_mod('header_text_bg'); ?> ;">
+				<h1 style="color:<?php echo get_theme_mod('header_text_color'); ?> ;"><?php echo esc_html(get_theme_mod('header_text'));?></h1>
 				</div>
 			</div>
 		</div>

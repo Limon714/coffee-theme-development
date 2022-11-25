@@ -57,46 +57,4 @@ add_action('wp_head', 'coffee_style');
 add_action('wp_enqueque_scripts', 'coffee_file_link');
 
 
-// function thelatest(){
-//     register_sidebar( array(
-        
-//        'name' => 'Right Sidebar',
-//        'id' => 'rst',
-//        'description' => 'My right sidebar Widgets',
-//        'before_widget' => '<ul>',
-// 		'after_widget'  => '</ul>',
-// 		'before_title'  => '<h2>',
-// 		'after_title'   => '</h2>',
-//     )
-// );
-// }
-
-// add_action( 'widgets_init', 'thelatest' );
-
-
-// Customize API
-
-// function thelimon($wp_costomize){
-   
-//     $wp_costomize->add_section('footer_sec',array(
-//         'title' => 'Footer Area',
-//         'priority' => 30,
-//     ));
-//     $wp_costomize->add_setting('copyright_sec',array(
-//         'default' => 'copyright 2022',
-//         'transport' => 'refresh'
-//     ));
-//     $wp_costomize->add_control('copyright_sec',array(
-
-//         'label' => 'Enter your copyright Text',
-//         'section' => 'footer_sec',
-//         'type' => 'text'
-//     ));
-
-
-
-// }
-
-// add_action( 'customize_register', 'thelimon' )
-
-// ?>
+require get_template_directory(). "./inc/customizer.php";
