@@ -13,18 +13,18 @@
 			<div class="head-main">
 
 
-			 <?php if(has_custom_logo( )){
-				the_custom_logo();
-			 } 
-			 else{
-				echo "<h1>".get_bloginfo( 'name' ). "</h1>";
-			 }
-			 
-			 ?>
+			 <img src="<?php echo get_theme_mod('image_setting_url'); ?>">
 				
 			</div>
 		</div>
 	</div>
+	<?php if ( true == get_theme_mod( 'coffee_switch_setting', true ) ) : ?>
+	
+
+		<h1 style="text-align: center;">
+			<?php echo get_theme_mod('coffee_text_setting'); ?>
+		</h1>
+		<?php endif; ?>
 	<!--header-top-end-->
 	<!--start-header-->
 	<div class="header">

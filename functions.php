@@ -58,3 +58,8 @@ add_action('wp_enqueque_scripts', 'coffee_file_link');
 
 
 require get_template_directory(). "./inc/customizer.php";
+require get_template_directory(). "./inc/widget.php";
+require get_template_directory(). "./inc/slider.php";
+require get_template_directory(). "./inc/tgm.php";
+require get_template_directory(). "./inc/kirki.php";
+require get_template_directory(). "./about.php";

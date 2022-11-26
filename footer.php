@@ -2,49 +2,26 @@
 <div class="slide">
 		<div class="container">
 			<div class="fle-xsel">
+
 			<ul id="flexiselDemo3">
+
+			<?php 
+			
+			$slider = new WP_Query(array(
+				'post_type' => 'sl'
+			));
+			
+			while($slider->have_posts()):$slider->the_post(); ?>
 				<li>
 					<a href="#">
 						<div class="banner-1">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/s-1.jpg" class="img-responsive" alt="">
+							<?php the_post_thumbnail(); ?>
 						</div>
 					</a>
 				</li>
-				<li>
-					<a href="#">
-						<div class="banner-1">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/s-2.jpg" class="img-responsive" alt="">
-						</div>
-					</a>
-				</li>			
-				<li>
-					<a href="#">
-						<div class="banner-1">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/s-3.jpg" class="img-responsive" alt="">
-						</div>
-					</a>
-				</li>		
-				<li>
-					<a href="#">
-						<div class="banner-1">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/s-4.jpg" class="img-responsive" alt="">
-						</div>
-					</a>
-				</li>	
-				<li>
-					<a href="#">
-						<div class="banner-1">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/s-5.jpg" class="img-responsive" alt="">
-						</div>
-					</a>
-				</li>	
-				<li>
-					<a href="#">
-						<div class="banner-1">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/s-6.jpg" class="img-responsive" alt="">
-						</div>
-					</a>
-				</li>				
+				
+				<?php endwhile; ?>
+						
 			</ul>
 							
 								
