@@ -56,7 +56,7 @@ add_action('wp_head', 'coffee_style');
 
 add_action('wp_enqueque_scripts', 'coffee_file_link');
 
-
+// We can also add "include_once"
 require get_template_directory(). "./inc/customizer.php";
 require get_template_directory(). "./inc/widget.php";
 require get_template_directory(). "./inc/slider.php";
