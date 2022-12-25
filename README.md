@@ -7,3 +7,6 @@
     Kirki Framework
 
     recent-posts-widget-extended
+    
+    Increased Performance. Kirki adds an optimization layer that is not built into WordPress. · Simplified API. 
+    The WordPress Customizer API can be quite confusing.
