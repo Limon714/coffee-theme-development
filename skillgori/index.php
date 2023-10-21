@@ -8,9 +8,23 @@
 </head>
 <body <?php body_class(); ?>>
 
+<?php
+wp_nav_menu( array(
+    'theme_location'=> 'header menu',
+    'fallback_cb'=>false,
+) )
 
+?>
+<hr>
 
+<?php
+wp_nav_menu( array(
+    'theme_location'=> 'footer menu',
+    'fallback_cb'=>false,
+   
+) )
 
+?>
 
 
 
