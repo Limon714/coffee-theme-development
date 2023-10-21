@@ -16,7 +16,19 @@ wp_nav_menu( array(
 
 ?>
 <hr>
+<div class="post">
 
+<?php 
+while ( have_posts() ) : the_post();
+
+?>
+
+<h1><?php the_title(); ?> </h1>
+<?php the_post_thumbnail(); ?>
+<p><?php the_content(); ?> </p>
+
+<?php endwhile; ?>
+</div>
 <?php
 wp_nav_menu( array(
     'theme_location'=> 'footer menu',
